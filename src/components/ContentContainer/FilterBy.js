@@ -38,7 +38,7 @@ const FilterBy = ({ setFilterBy }) => {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <Typography variant="subtitle1">Filter by</Typography>
+        <Typography variant="subtitle1">Sort by</Typography>
         <ArrowDropDownIcon />
       </IconButton>
       <Menu

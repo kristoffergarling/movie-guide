@@ -4,7 +4,7 @@ import { Card, CardMedia, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { img_300, unavailable } from "../../config/config";
 
-import MoreInfo from "./MoreInfo";
+import MoreInfo from "./SingleContentModal/SingleContentModal";
 
 const StyledCard = styled(Card)({
   backgroundColor: "#100F0F",
@@ -18,14 +18,16 @@ const StyledCard = styled(Card)({
 
 const Rating = styled(Typography)({
   position: "absolute",
-  backgroundColor: "#2B7A0B",
+  fontSize: { xs: "1rem", sm: "1.5rem", md: "2.5rem", lg: "3rem" },
+  backgroundColor: "#413F42",
   borderRadius: "50%",
-  width: "25px",
+  border: "2px solid #100F0F",
+  width: "30px",
   paddingTop: "2px",
   textAlign: "center",
-  color: "white",
-  top: 1,
-  left: "94%",
+  color: "#F1F1F1",
+  top: 7,
+  left: "90.5%",
   transform: "translateX(-50%)",
 });
 
@@ -46,7 +48,16 @@ const SingleContent = ({ data }) => {
           <Rating>{data.vote_average.toFixed(1)}</Rating>
         </div>
       </StyledCard>
-      <MoreInfo data={data} open={open} handleClose={handleClose} />
+      <MoreInfo
+        id={data.id}
+        poster={data.poster_path}
+        title={data.title}
+        voteAverage={data.vote_average}
+        description={data.overview}
+        releaseDate={data.release_date}
+        open={open}
+        handleClose={handleClose}
+      />
     </>
   );
 };

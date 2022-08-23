@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import ContentContainer from "../components/ContentContainer";
+import ContentContainer from "../components/ContentContainer/ContentContainer";
 
 const Search = ({ searchInput }) => {
   const [content, setContent] = useState([]);

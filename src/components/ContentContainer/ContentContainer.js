@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "@mui/system";
 
-import { Grid, Container, Box, Typography } from "@mui/material";
+import {
+  Grid,
+  Container,
+  Box,
+  Typography,
+  CircularProgress,
+} from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
-import SingleContent from "./SingleContent/SingleContent";
+import SingleContent from "../SingleContent/SingleContent";
 import FilterBy from "./FilterBy";
 
 const StyledContainer = styled(Container)({
@@ -59,7 +65,7 @@ const ContentContainer = ({
     <StyledContainer>
       <FilterBy setFilterBy={setFilterBy} />
       <Grid container spacing={2}>
-        {content.length > 0 ? (
+        {content && content.length > 0 ? (
           filterMovies().map((c) => (
             <Grid key={c.id} item xs={6} sm={4} md={3} lg={3}>
               <SingleContent data={c} />
@@ -71,11 +77,11 @@ const ContentContainer = ({
             xs={12}
             sx={{ marginTop: 10, display: "flex", justifyContent: "center" }}
           >
-            <Typography variant="h6">No movies found</Typography>
+            <Typography variant="h6">No results found</Typography>
           </Grid>
         )}
       </Grid>
-      {!noLoadButton && (
+      {!noLoadButton && content.length > 0 && (
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <LoadMoreButton
             size="large"
