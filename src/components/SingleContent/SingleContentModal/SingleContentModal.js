@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "@mui/system";
+import "./SingleContentModal.css";
 
 import {
   Box,
@@ -25,6 +26,7 @@ const StyledGrid = styled(Grid)({
   right: "50%",
   width: "80%",
   maxWidth: "700px",
+  maxHeight: "600px",
   transform: "translate(-50%, -50%)",
   padding: 16,
   backgroundColor: "#100F0F",
@@ -32,6 +34,8 @@ const StyledGrid = styled(Grid)({
   borderRadius: 2,
   border: "1px solid #F1F1F1",
   transition: "all 2s ease-in-out",
+  overflowY: "scroll",
+  scrollbarWidth: "none",
 });
 
 const SingleContentModal = ({
@@ -76,7 +80,7 @@ const SingleContentModal = ({
         aria-describedby="modal-modal-description"
       >
         <Fade in={open}>
-          <StyledGrid container>
+          <StyledGrid className="scrollbar-hidden" container>
             <Grid
               item
               xs={12}
@@ -86,7 +90,7 @@ const SingleContentModal = ({
               <MoviePoster poster={poster} />
             </Grid>
 
-            <Grid item xs={12} sm={7} sx={{ marginLeft: { xs: 2 } }}>
+            <Grid item xs={12} sm={7} sx={{ marginLeft: { xs: 0, sm: 2 } }}>
               <Box>
                 <Typography
                   sx={{ marginTop: { xs: 2, sm: 0 } }}
