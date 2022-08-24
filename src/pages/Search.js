@@ -20,9 +20,10 @@ const Search = ({ searchInput }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetchSearch(pageNumber);
+    fetchSearch();
     setLoading(false);
-  }, [pageNumber, searchInput]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchInput]);
 
   return (
     <>

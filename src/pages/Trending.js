@@ -17,7 +17,7 @@ const Trending = () => {
 
   useEffect(() => {
     fetchTrending();
-  }, []);
+  });
 
   return (
     <ContentContainer content={content} noLoadButton={true}></ContentContainer>
