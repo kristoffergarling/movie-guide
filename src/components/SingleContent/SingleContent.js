@@ -4,7 +4,7 @@ import { Card, CardMedia, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { img_300, unavailable } from "../../config/config";
 
-import MoreInfo from "./SingleContentModal/SingleContentModal";
+import SingleContentModal from "./SingleContentModal/SingleContentModal";
 
 const StyledCard = styled(Card)({
   backgroundColor: "#100F0F",
@@ -36,6 +36,7 @@ const SingleContent = ({ data }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  console.log(open);
   return (
     <>
       <StyledCard onClick={handleOpen}>
@@ -48,7 +49,7 @@ const SingleContent = ({ data }) => {
           <Rating>{data.vote_average.toFixed(1)}</Rating>
         </div>
       </StyledCard>
-      <MoreInfo
+      <SingleContentModal
         id={data.id}
         poster={data.poster_path}
         title={data.title}

@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/system";
 
-import {
-  Grid,
-  Container,
-  Box,
-  Typography,
-  CircularProgress,
-} from "@mui/material";
+import { Grid, Container, Box, Typography } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import SingleContent from "../SingleContent/SingleContent";
 import FilterBy from "./FilterBy";
@@ -57,9 +51,9 @@ const ContentContainer = ({
     }
   };
 
-  function handleClick() {
+  const handleClick = () => {
     setPageNumber((prevState) => prevState + 1);
-  }
+  };
 
   return (
     <StyledContainer>

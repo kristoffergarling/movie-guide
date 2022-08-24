@@ -3,8 +3,6 @@ import { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Menu, MenuItem, IconButton, Typography } from "@mui/material";
 
-import { styled } from "@mui/system";
-
 const options = [
   "Alphabetical",
   "Rating Ascending",
@@ -13,20 +11,19 @@ const options = [
   "Release Date Descending",
 ];
 
-const styledMenu = styled(Menu)({
-  marginTop: 75,
-});
-
 const FilterBy = ({ setFilterBy }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = anchorEl;
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = (e) => {
     setFilterBy(e.target.innerText);
     setAnchorEl(false);
   };
+
   return (
     <div>
       <IconButton
@@ -41,6 +38,7 @@ const FilterBy = ({ setFilterBy }) => {
         <Typography variant="subtitle1">Sort by</Typography>
         <ArrowDropDownIcon />
       </IconButton>
+
       <Menu
         id="long-menu"
         MenuListProps={{

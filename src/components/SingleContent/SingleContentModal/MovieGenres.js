@@ -2,7 +2,7 @@ import { Grid, Chip } from "@mui/material";
 import { styled } from "@mui/system";
 
 const GenreChip = styled(Chip)({
-  margin: 0.3,
+  margin: "2px",
   color: "#F1F1F1",
 });
 

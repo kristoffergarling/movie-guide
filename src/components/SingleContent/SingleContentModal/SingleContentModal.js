@@ -3,16 +3,7 @@ import axios from "axios";
 import { styled } from "@mui/system";
 import "./SingleContentModal.css";
 
-import {
-  Box,
-  Grid,
-  Typography,
-  Modal,
-  Rating,
-  Fade,
-  Stack,
-  Chip,
-} from "@mui/material";
+import { Box, Grid, Typography, Modal, Fade } from "@mui/material";
 import MovieRating from "./MovieRating";
 import MoviePoster from "./MoviePoster";
 import MovieDescription from "./MovieDescription";
@@ -68,7 +59,7 @@ const SingleContentModal = ({
   useEffect(() => {
     fetchMovieDetails();
     fetchCredits();
-  }, []);
+  });
 
   return (
     <div>

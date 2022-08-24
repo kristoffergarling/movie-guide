@@ -4,7 +4,7 @@ const MovieRating = ({ voteAverage }) => {
   const formatVoteAverage = (voteAverage) => {
     // 5/5 is max rating and the api gives a score out of 10
     const toScoreOutOfFive = 2;
-    return (voteAverage / toScoreOutOfFive).toFixed(1);
+    return voteAverage / toScoreOutOfFive;
   };
 
   return (

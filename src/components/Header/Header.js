@@ -46,6 +46,7 @@ const Header = ({ setSearchInput }) => {
       }
     }, 1000);
     return () => clearTimeout(identifier);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userInput]);
 
   return (
