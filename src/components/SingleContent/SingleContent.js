@@ -36,7 +36,6 @@ const SingleContent = ({ data }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  console.log(open);
   return (
     <>
       <StyledCard onClick={handleOpen}>
