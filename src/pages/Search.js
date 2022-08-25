@@ -5,12 +5,10 @@ import ContentContainer from "../components/ContentContainer/ContentContainer";
 
 const Search = ({ searchInput }) => {
   const [content, setContent] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [pageNumber, setPageNumber] = useState(1);
 
   const fetchSearch = async () => {
-    setLoading(true);
-
     if (searchInput.trim() === "") {
       return;
     }
@@ -30,10 +28,10 @@ const Search = ({ searchInput }) => {
 
   return (
     <>
-      {loading && <div>Loading...</div>}
       <ContentContainer
         setPageNumber={setPageNumber}
         content={content}
+        loading={loading}
         noLoadButton={true}
       ></ContentContainer>
     </>

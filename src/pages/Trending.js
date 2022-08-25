@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Trending = () => {
   const [content, setContent] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchTrending = async () => {
     const { data } = await axios.get(
@@ -13,6 +14,7 @@ const Trending = () => {
     );
 
     setContent(data.results);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -20,7 +22,11 @@ const Trending = () => {
   });
 
   return (
-    <ContentContainer content={content} noLoadButton={true}></ContentContainer>
+    <ContentContainer
+      loading={loading}
+      content={content}
+      noLoadButton={true}
+    ></ContentContainer>
   );
 };
 export default Trending;
