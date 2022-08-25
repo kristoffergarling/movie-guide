@@ -1,5 +1,5 @@
 <h1>Movie Guide</h1>
-<a href="amovieguide.netlify.app">Live Demo hosted on Netlify</a>
+<a href="amovieguide.netlify.com">Live Demo hosted on Netlify</a>
 
 <h3>Features</h3>
 <ul>
