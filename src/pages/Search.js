@@ -9,19 +9,22 @@ const Search = ({ searchInput }) => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const fetchSearch = async () => {
+    setLoading(true);
+
     if (searchInput.trim() === "") {
       return;
     }
+
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchInput}&page=${pageNumber}&include_adult=false`
     );
+
     setContent(data.results);
+    setLoading(false);
   };
 
   useEffect(() => {
-    setLoading(true);
     fetchSearch();
-    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchInput]);
 

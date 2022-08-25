@@ -1,25 +1,14 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 
-import { Grid, Container, Box, Typography } from "@mui/material";
-import LoadingButton from "@mui/lab/LoadingButton";
+import { Grid, Container, Typography } from "@mui/material";
 import SingleContent from "../SingleContent/SingleContent";
 import FilterBy from "./FilterBy";
+import LoadingCircle from "./LoadingCircle";
+import LoadMoreButton from "./LoadMoreButton";
 
 const StyledContainer = styled(Container)({
   marginBottom: 100,
-});
-
-const LoadMoreButton = styled(LoadingButton)({
-  marginTop: 25,
-  color: "#F1F1F1",
-  borderColor: "#F1F1F1",
-  alignItems: "center",
-  "&:hover": {
-    borderColor: "#F1F1F1",
-    transform: "scale(1.01)",
-    cursor: "pointer",
-  },
 });
 
 const ContentContainer = ({
@@ -71,22 +60,16 @@ const ContentContainer = ({
             xs={12}
             sx={{ marginTop: 10, display: "flex", justifyContent: "center" }}
           >
-            <Typography variant="h6">No results found</Typography>
+            {loading ? (
+              <LoadingCircle />
+            ) : (
+              <Typography variant="h6">No results found</Typography>
+            )}
           </Grid>
         )}
       </Grid>
       {!noLoadButton && content.length > 0 && (
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <LoadMoreButton
-            size="large"
-            onClick={handleClick}
-            loading={loading}
-            loadingIndicator="Loading…"
-            variant="outlined"
-          >
-            Load More
-          </LoadMoreButton>
-        </Box>
+        <LoadMoreButton handleClick={handleClick} loading={loading} />
       )}
     </StyledContainer>
   );
