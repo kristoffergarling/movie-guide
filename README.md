@@ -11,12 +11,12 @@
 
 <h3>Built using</h3>
 <ul>
-<li><a href="https://reactjs.org/">React</a></li>
-<li><a href="https://reactrouter.com/">React Router</a></li>
-<li><a href="https://mui.com/">Material UI with custom styling</a></li>
-<li><a href="https://www.npmjs.com/package/react-alice-carousel">Alice Carousel - (Carousel used for Actors in the Movie Modal)</a></li>
-<li><a href="https://developers.themoviedb.org/3/getting-started/introduction">Axios</a></li>
-<li><a href="https://developers.themoviedb.org/3/getting-started/introduction">The Movie Database API</a></li>
+<li><a href="https://reactjs.org/" target="_blank">React</a></li>
+<li><a href="https://reactrouter.com/" target="_blank">React Router</a></li>
+<li><a href="https://mui.com/" target="_blank">Material UI with custom styling</a></li>
+<li><a href="https://www.npmjs.com/package/react-alice-carousel" target="_blank">Alice Carousel - (Carousel used for Actors in the Movie Modal)</a></li>
+<li><a href="https://developers.themoviedb.org/3/getting-started/introduction" target="_blank">Axios</a></li>
+<li><a href="https://developers.themoviedb.org/3/getting-started/introduction" target="_blank">The Movie Database API</a></li>
 </ul>
 
 <h3>Screenshots</h3>
