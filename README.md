@@ -3,10 +3,10 @@
 
 <h3>Features</h3>
 <ul>
-<li>View Trending, Top Rated, New Releases and Upcoming Movies</li>
+<li>View Trending, Top Rated, New Releases and Upcoming Movies.</li>
 <li>Clickable images that shows a modal with additional info about the movie. Such as actors, genres and description.</li>
-<li>Search function for movies</li>
-<li>Sort function to sort the movies by Alphabetical, Rating Ascending/Descending and Release date Ascending/Descending</li>
+<li>Search function for movies.</li>
+<li>Sort function to sort the movies by Alphabetical, Rating Ascending/Descending and Release date Ascending/Descending.</li>
 </ul>
 
 <h3>Built using</h3>
