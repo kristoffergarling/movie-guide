@@ -21,14 +21,14 @@
 
 <h3>Screenshots</h3>
 
-#Desktop
+<h5>Desktop</h5>
 
 <div>
 <img src="./screenshots/homepage.png" alt="homepage">
 <img src="./screenshots/homepage-modal.png" alt="homepage modal">
 </div>
 
-#Mobile
+<h5>Mobile</h5>
 
 <div>
 <img src="./screenshots/smallscreen.png" alt="homepage modal">
