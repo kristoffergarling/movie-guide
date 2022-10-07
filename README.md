@@ -21,10 +21,14 @@
 
 <h3>Screenshots</h3>
 
+#Desktop
+
 <div>
 <img src="./screenshots/homepage.png" alt="homepage">
 <img src="./screenshots/homepage-modal.png" alt="homepage modal">
 </div>
+
+#Mobile
 
 <div>
 <img src="./screenshots/smallscreen.png" alt="homepage modal">
